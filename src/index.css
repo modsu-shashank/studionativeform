@@ -384,26 +384,15 @@ button {
   animation: fadeInUp 1s ease-out;
 }
 
-.projects-page .hero-title {
-  color: #E6D0B9;
-}
-
-.home-page .hero-title {
-  color: #E6D0B9;
-}
-
-.about-page .hero-title {
-  color: #E6D0B9;
-}
-
-.design-approach-page .hero-title {
-  color: #E6D0B9;
-}
-
+.projects-page .hero-title,
+.home-page .hero-title,
+.about-page .hero-title,
+.design-approach-page .hero-title,
 .architecture-page .hero-title,
 .interiors-page .hero-title,
 .landscaping-page .hero-title,
-.contact-page .hero-title {
+.contact-page .hero-title,
+.project-detail-page .hero-title {
   color: #E6D0B9;
 }
 

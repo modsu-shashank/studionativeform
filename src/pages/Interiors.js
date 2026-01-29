@@ -1,24 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import projectsData from '../data/projects';
 
 const Interiors = () => {
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true);
-    const navigate = useNavigate();
 
     useEffect(() => {
-        // Simulate loading for better UX
         setTimeout(() => {
             const interiorsProjects = projectsData.filter(project => project.category === 'Interiors');
             setProjects(interiorsProjects);
             setLoading(false);
         }, 500);
     }, []);
-
-    const goToProject = (id) => {
-        navigate(`/project/${id}`);
-    };
 
     return (
         <div className="interiors-page">

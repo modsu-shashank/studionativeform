@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import projectsData from '../data/projects';
 
 const Projects = () => {
@@ -7,8 +7,6 @@ const Projects = () => {
     const [filteredProjects, setFilteredProjects] = useState([]);
     const [activeFilter, setActiveFilter] = useState('All');
     const [loading, setLoading] = useState(true);
-
-    const navigate = useNavigate();
 
     useEffect(() => {
         setTimeout(() => {
@@ -27,10 +25,6 @@ const Projects = () => {
                 projects.filter(project => project.category === category)
             );
         }
-    };
-
-    const goToProject = (id) => {
-        navigate(`/project/${id}`);
     };
 
     return (

@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import projectsData from '../data/projects';
 
 const Home = () => {
     const [featuredProjects, setFeaturedProjects] = useState([]);
     const [loading, setLoading] = useState(true);
-    const navigate = useNavigate();
-
-    const goToProject = (id) => {
-        navigate(`/project/${id}`);
-    };
 
     useEffect(() => {
         setTimeout(() => {

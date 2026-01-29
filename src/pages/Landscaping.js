@@ -1,24 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import projectsData from '../data/projects';
 
 const Landscaping = () => {
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true);
-    const navigate = useNavigate();
 
     useEffect(() => {
-        // Simulate loading for better UX
         setTimeout(() => {
             const landscapingProjects = projectsData.filter(project => project.category === 'Landscaping');
             setProjects(landscapingProjects);
             setLoading(false);
         }, 500);
     }, []);
-
-    const goToProject = (id) => {
-        navigate(`/project/${id}`);
-    };
 
     return (
         <div className="landscaping-page">
