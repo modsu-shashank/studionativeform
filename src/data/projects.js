@@ -15,7 +15,7 @@ const projectsData = [
             }
         ],
         year: 2024,
-        location: 'Los Angeles, CA',
+        location: 'Hyderabad, Telangana',
         area: '4,500 sq ft',
         client: 'Private Client',
         featured: true,
@@ -37,7 +37,7 @@ const projectsData = [
             }
         ],
         year: 2023,
-        location: 'Brooklyn, NY',
+        location: 'Hyderabad, Telangana',
         area: '2,200 sq ft',
         client: 'Private Client',
         featured: true,
@@ -58,8 +58,8 @@ const projectsData = [
                 isPrimary: true
             }
         ],
-        year: 2024,
-        location: 'San Francisco, CA',
+        year: 2021,
+        location: 'Hyderabad, Telangana',
         area: '1,800 sq ft',
         client: 'Private Client',
         featured: true,
@@ -80,8 +80,8 @@ const projectsData = [
                 isPrimary: true
             }
         ],
-        year: 2023,
-        location: 'Seattle, WA',
+        year: 2025,
+        location: 'Hyderabad, Telangana',
         area: '45,000 sq ft',
         client: 'Tech Corporation',
         featured: false,
@@ -102,8 +102,8 @@ const projectsData = [
                 isPrimary: true
             }
         ],
-        year: 2024,
-        location: 'Charleston, SC',
+        year: 2023,
+        location: 'Hyderabad, Telangana',
         area: '8,500 sq ft',
         client: 'Hospitality Group',
         featured: false,
@@ -124,13 +124,123 @@ const projectsData = [
                 isPrimary: true
             }
         ],
-        year: 2023,
-        location: 'Chicago, IL',
+        year: 2022,
+        location: 'Hyderabad, Telangana',
         area: '3,200 sq ft',
         client: 'Residential Building',
         featured: false,
         status: 'Completed',
         tags: ['Rooftop', 'Urban', 'Sustainable']
+    },
+    {
+        _id: '7',
+        title: 'Mr. Kiran Cafe',
+        category: 'Architecture',
+        subcategory: 'Commercial',
+        description: 'A vibrant and modern cafe designed to offer a unique social experience. The space features an open layout with a mix of industrial and organic elements, creating a warm and inviting atmosphere for coffee enthusiasts.',
+        shortDescription: 'Modern cafe with industrial-organic design',
+        images: [
+            {
+                url: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80',
+                caption: 'Cafe interior with natural lighting',
+                isPrimary: true
+            }
+        ],
+        year: 2024,
+        location: 'Hyderabad, Telangana',
+        area: '1,200 sq ft',
+        client: 'Mr. Kiran',
+        featured: true,
+        status: 'Completed',
+        tags: ['Commercial', 'Cafe', 'Modern']
+    },
+    {
+        _id: '8',
+        title: "Mr. Hari Krishna Reddy's Residence",
+        category: 'Architecture',
+        subcategory: 'Residential',
+        description: "A luxury private residence that emphasizes grandeur and contemporary elegance. The architectural design focuses on large volumetric spaces, premium finishes, and a seamless flow between the interior and landscaped courtyards.",
+        shortDescription: 'Luxury contemporary residence with elegant courtyards',
+        images: [
+            {
+                url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+                caption: 'Modern residential elevation',
+                isPrimary: true
+            }
+        ],
+        year: 2023,
+        location: 'Hyderabad, Telangana',
+        area: '6,000 sq ft',
+        client: 'Mr. Hari Krishna Reddy',
+        featured: true,
+        status: 'Completed',
+        tags: ['Residential', 'Luxury', 'Contemporary']
+    },
+    {
+        _id: '9',
+        title: 'Mr. Ramireddy Farmhouse',
+        category: 'Architecture',
+        subcategory: 'Residential',
+        description: 'A serene farmhouse retreat that harmonizes with its natural surroundings. The design utilizes traditional materials with a modern twist, featuring wide sit-outs and expansive landscaping that offer a perfect escape from city life.',
+        shortDescription: 'Modern farmhouse retreat in nature',
+        images: [
+            {
+                url: 'https://imgs.search.brave.com/MabsDkpvKrAJH5f7VOitxVQ0NgF5nmm20sya9Hljypw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9BTkRST0lEL0Rl/ZmF1bHQvMjAyMi81/L1lVL1FOL0dXLzE1/MTYzMjkxNi9wcm9k/dWN0LWpwZWctNTAw/eDUwMC5qcGc',
+                caption: 'Farmhouse nestled in greenery',
+                isPrimary: true
+            }
+        ],
+        year: 2024,
+        location: 'Hyderabad, Telangana',
+        area: '3,500 sq ft',
+        client: 'Mr. Ramireddy',
+        featured: true,
+        status: 'Completed',
+        tags: ['Residential', 'Farmhouse', 'Landscaping']
+    },
+    {
+        _id: '10',
+        title: 'Mr. Srinivas Interiors 3BHK',
+        category: 'Interiors',
+        subcategory: 'Residential',
+        description: 'A thoughtfully designed 3BHK apartment interior that maximizes space and comfort. The design features a modern-minimalist palette with custom-made furniture and smart storage solutions, tailored to the family\'s lifestyle.',
+        shortDescription: 'Modern-minimalist 3BHK apartment interior',
+        images: [
+            {
+                url: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80',
+                caption: 'Living room with custom cabinetry',
+                isPrimary: true
+            }
+        ],
+        year: 2023,
+        location: 'Hyderabad, Telangana',
+        area: '1,800 sq ft',
+        client: 'Mr. Srinivas',
+        featured: false,
+        status: 'Completed',
+        tags: ['Interior', 'Residential', '3BHK']
+    },
+    {
+        _id: '11',
+        title: 'Mr. Rohith NCC Urban 4BHK',
+        category: 'Interiors',
+        subcategory: 'Residential',
+        description: 'An upscale 4BHK residential interior project at NCC Urban. The design reflects a premium lifestyle with sophisticated material finishes, elegant lighting design, and a cohesive aesthetic across all living quarters.',
+        shortDescription: 'Premium 4BHK interior design at NCC Urban',
+        images: [
+            {
+                url: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80',
+                caption: 'Dining area with premium finishes',
+                isPrimary: true
+            }
+        ],
+        year: 2025,
+        location: 'Hyderabad, Telangana',
+        area: '2,800 sq ft',
+        client: 'Mr. Rohith',
+        featured: false,
+        status: 'In Progress',
+        tags: ['Interior', 'Residential', 'Luxury']
     }
 ];
 

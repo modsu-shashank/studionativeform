@@ -23,8 +23,9 @@ const Contact = () => {
                     <div
                         style={{
                             display: "grid",
-                            gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
-                            gap: "48px",
+                            gridTemplateColumns: "repeat(auto-fit, minmax(clamp(250px, 100%, 350px), 1fr))",
+                            gap: "var(--spacing-2xl)",
+                            marginTop: "var(--spacing-3xl)",
                             alignItems: "start"
                         }}
                     >
@@ -125,7 +126,7 @@ const Contact = () => {
                         </div>
 
                         {/* Map */}
-                        <div style={{ height: "500px" }}>
+                        <div style={{ height: "clamp(300px, 50vh, 500px)" }}>
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6841596835564!2d78.438553!3d17.412348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb973a1a9fcb19%3A0x4c0b8e9e47c4f4e3!2sBanjara%20Hills%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1706000000000"
                                 width="100%"

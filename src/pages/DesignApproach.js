@@ -36,12 +36,12 @@ const DesignApproach = () => {
                             We begin by observing people, place, and purpose. Understanding how spaces are used, experienced and evolve over time.
                             <br />
                             Context, function and movement influence each decision, allowing ideas to develop through a calm and considered process.
-                         <br />
-                         Clarity and restraint guide the work, ensuring every space remains relevant beyond trends.
-                         <br />
-                         The result is architecture that feels intuitive and balanced. Spaces shaped with intention and designed to integrate naturally into everyday life.
-                         </p>
-                    
+                            <br />
+                            Clarity and restraint guide the work, ensuring every space remains relevant beyond trends.
+                            <br />
+                            The result is architecture that feels intuitive and balanced. Spaces shaped with intention and designed to integrate naturally into everyday life.
+                        </p>
+
                     </div>
                 </div>
             </section>
@@ -53,7 +53,7 @@ const DesignApproach = () => {
                         {/* Step 1 */}
                         <div style={{
                             display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
                             gap: 'var(--spacing-2xl)',
                             marginBottom: 'var(--spacing-4xl)',
                             paddingBottom: 'var(--spacing-4xl)',
@@ -102,7 +102,7 @@ const DesignApproach = () => {
                         {/* Step 2 */}
                         <div style={{
                             display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
                             gap: 'var(--spacing-2xl)',
                             marginBottom: 'var(--spacing-4xl)',
                             paddingBottom: 'var(--spacing-4xl)',
@@ -150,7 +150,7 @@ const DesignApproach = () => {
                         {/* Step 3 */}
                         <div style={{
                             display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
                             gap: 'var(--spacing-2xl)',
                             marginBottom: 'var(--spacing-4xl)',
                             paddingBottom: 'var(--spacing-4xl)',
@@ -198,7 +198,7 @@ const DesignApproach = () => {
                         {/* Step 4 */}
                         <div style={{
                             display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
                             gap: 'var(--spacing-2xl)',
                             marginBottom: 'var(--spacing-4xl)',
                             paddingBottom: 'var(--spacing-4xl)',
@@ -246,7 +246,7 @@ const DesignApproach = () => {
                         {/* Step 5 */}
                         <div style={{
                             display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
                             gap: 'var(--spacing-2xl)'
                         }}>
                             <div>
@@ -292,7 +292,7 @@ const DesignApproach = () => {
             </section>
 
             {/* Call to Action */}
-            <section className="section">
+            <section className="section" style={{ padding: 'var(--spacing-2xl) 0 var(--spacing-xl)' }}>
                 <div className="container" style={{ textAlign: 'center' }}>
                     <h2 style={{ marginBottom: 'var(--spacing-md)' }}>
                         Ready to Begin Your Project?
@@ -300,9 +300,9 @@ const DesignApproach = () => {
                     <p style={{
                         fontSize: 'var(--font-size-lg)',
                         color: 'var(--color-text-secondary)',
-                        marginBottom: 'var(--spacing-2xl)',
+                        marginBottom: 'var(--spacing-lg)',
                         maxWidth: '700px',
-                        margin: '0 auto var(--spacing-2xl)'
+                        margin: '0 auto var(--spacing-lg)'
                     }}>
                         Let's discuss how we can bring your vision to life through our collaborative design process
                     </p>

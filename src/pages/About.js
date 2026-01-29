@@ -224,7 +224,7 @@ const About = () => {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(clamp(250px, 100%, 300px), 1fr))",
               gap: "var(--spacing-2xl)",
               marginTop: "var(--spacing-3xl)",
             }}

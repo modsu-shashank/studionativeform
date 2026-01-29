@@ -13,7 +13,6 @@ const Footer = () => {
                             <img src={logo} alt="Studio Native Form" style={{ height: '60px', width: 'auto' }} />
                         </Link>
                         <p className="footer-description">
-                            <br />
                             TIMELESS SPACES.
                             <br />
                             THOUGHTFULLY

@@ -134,7 +134,7 @@ const Home = () => {
                             <div className="spinner"></div>
                         </div>
                     ) : (
-                        <div className="projects-grid">
+                        <div className="featured-grid">
                             {featuredProjects.length > 0 ? (
                                 featuredProjects.map((project) => (
                                     <div
@@ -241,7 +241,8 @@ const Home = () => {
             {/* Call to Action Section */}
             <section className="section" style={{
                 backgroundColor: 'var(--color-bg-dark)',
-                color: 'var(--color-text-white)'
+                textAlign: 'center',
+                padding: 'var(--spacing-2xl) 0 var(--spacing-xl)'
             }}>
                 <div className="container" style={{ textAlign: 'center' }}>
                     <h2 style={{
@@ -253,9 +254,9 @@ const Home = () => {
                     </h2>
                     <p style={{
                         fontSize: 'var(--font-size-lg)',
-                        marginBottom: 'var(--spacing-2xl)',
+                        marginBottom: 'var(--spacing-lg)',
                         maxWidth: '700px',
-                        margin: '0 auto var(--spacing-2xl)',
+                        margin: '0 auto var(--spacing-lg)',
                         color: 'rgba(255, 255, 255, 0.9)'
                     }}>
                         Let's collaborate to create spaces that inspire and endure.
