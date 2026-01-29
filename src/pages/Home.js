@@ -7,9 +7,8 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
-    const goToProject = (category) => {
-        const path = category.toLowerCase().includes('interior') ? '/interiors' : `/${category.toLowerCase()}`;
-        navigate(path);
+    const goToProject = (id) => {
+        navigate(`/project/${id}`);
     };
 
     useEffect(() => {
@@ -140,7 +139,7 @@ const Home = () => {
                                     <div
                                         key={project._id}
                                         className="project-card"
-                                        onClick={() => goToProject(project.category)}
+                                        onClick={() => goToProject(project._id)}
                                         style={{ cursor: 'pointer' }}
                                     >
                                         <img

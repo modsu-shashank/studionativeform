@@ -12,7 +12,7 @@ import About from './pages/About';
 import DesignApproach from './pages/DesignApproach';
 import Contact from './pages/Contact';
 import './index.css';
-// import ProjectDetail from './ProjectDetail';
+import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/project/:id" element={<ProjectDetail />} />
 
           <Route path="/architecture" element={<Architecture />} />
           <Route path="/interiors" element={<Interiors />} />

@@ -29,9 +29,8 @@ const Projects = () => {
         }
     };
 
-    const goToProject = (category) => {
-        const path = category.toLowerCase().includes('interior') ? '/interiors' : `/${category.toLowerCase()}`;
-        navigate(path);
+    const goToProject = (id) => {
+        navigate(`/project/${id}`);
     };
 
     return (
@@ -87,7 +86,7 @@ const Projects = () => {
                                         <div
                                             key={project._id}
                                             className="project-card"
-                                            onClick={() => goToProject(project.category)}
+                                            onClick={() => goToProject(project._id)}
                                             style={{ cursor: 'pointer' }}
                                         >
                                             <img
