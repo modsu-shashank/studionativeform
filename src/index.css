@@ -200,7 +200,7 @@ button {
 
 .section-sm {
   padding: var(--spacing-3xl) 0;
-} 
+}
 
 .section-lg {
   padding: 6rem 0;
@@ -406,7 +406,6 @@ button {
 .architecture-page .hero-title,
 .interiors-page .hero-title,
 .landscaping-page .hero-title,
-.our-works-page .hero-title,
 .contact-page .hero-title {
   color: #E6D0B9;
 }

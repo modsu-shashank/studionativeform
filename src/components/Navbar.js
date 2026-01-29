@@ -46,26 +46,26 @@ const Navbar = () => {
                             Projects
                         </Link>
                     </li>
-                    <li>
-                        <Link to="/about" className={isActive('/about')}>
-                            About Us
-                        </Link>
-                    </li>
+
                     <li>
                         <Link to="/design-approach" className={isActive('/design-approach')}>
                             Design Approach
                         </Link>
                     </li>
+
                     <li>
-                        <Link to="/our-works" className={isActive('/our-works')}>
-                            Our Works
+                        <Link to="/about" className={isActive('/about')}>
+                            About Us
                         </Link>
                     </li>
+
+
                     <li>
                         <Link to="/contact" className={isActive('/contact')}>
                             Contact Us
                         </Link>
                     </li>
+
                 </ul>
             </div>
         </nav>

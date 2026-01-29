@@ -28,7 +28,6 @@ const Footer = () => {
                             <li><Link to="/architecture">Architecture</Link></li>
                             <li><Link to="/interiors">Interior Design</Link></li>
                             <li><Link to="/landscaping">Landscaping</Link></li>
-                            {/* <li><Link to="/design-approach">Design</Link></li> */}
                         </ul>
                     </div>
 
@@ -36,8 +35,8 @@ const Footer = () => {
                         <h4>Quick Links</h4>
                         <ul className="footer-links">
                             <li><Link to="/">Home</Link></li>
+                            <li><Link to="/projects">Projects</Link></li>
                             <li><Link to="/about">About Us</Link></li>
-                            <li><Link to="/our-works">Our Works</Link></li>
                             <li><Link to="/contact">Contact</Link></li>
                         </ul>
                     </div>

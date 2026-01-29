@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import projectsData from '../data/projects';
 
 const Home = () => {
     const [featuredProjects, setFeaturedProjects] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [selectedImage, setSelectedImage] = useState(null);
+    const navigate = useNavigate();
+
+    const goToProject = (category) => {
+        const path = category.toLowerCase().includes('interior') ? '/interiors' : `/${category.toLowerCase()}`;
+        navigate(path);
+    };
 
     useEffect(() => {
         setTimeout(() => {
@@ -15,25 +20,7 @@ const Home = () => {
         }, 500);
     }, []);
 
-    useEffect(() => {
-        if (selectedImage) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'unset';
-        }
 
-        return () => {
-            document.body.style.overflow = 'unset';
-        };
-    }, [selectedImage]);
-
-    const openModal = (imageUrl) => {
-        setSelectedImage(imageUrl);
-    };
-
-    const closeModal = () => {
-        setSelectedImage(null);
-    };
 
     return (
         <div className="home-page">
@@ -54,7 +41,7 @@ const Home = () => {
                         environments that resonate with your vision.
                     </p>
                     <div className="hero-cta">
-                        <Link to="/our-works" className="btn btn-primary">Explore Our Work</Link>
+                        <Link to="/projects" className="btn btn-primary">Explore Projects</Link>
                         <Link to="/contact" className="btn btn-secondary">Get In Touch</Link>
                     </div>
                 </div>
@@ -153,9 +140,8 @@ const Home = () => {
                                     <div
                                         key={project._id}
                                         className="project-card"
-                                        onClick={() => openModal(project.images && project.images.length > 0
-                                            ? project.images[0].url
-                                            : 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80')}
+                                        onClick={() => goToProject(project.category)}
+                                        style={{ cursor: 'pointer' }}
                                     >
                                         <img
                                             src={project.images && project.images.length > 0
@@ -181,7 +167,7 @@ const Home = () => {
                     )}
 
                     <div style={{ textAlign: 'center', marginTop: 'var(--spacing-3xl)' }}>
-                        <Link to="/our-works" className="btn btn-outline">
+                        <Link to="/projects" className="btn btn-outline">
                             View All Projects
                         </Link>
                     </div>
@@ -281,19 +267,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Image Modal */}
-            {selectedImage && (
-                <div className="modal-overlay" onClick={closeModal}>
-                    <div className="modal-content" onClick={e => e.stopPropagation()}>
-                        <button className="modal-close" onClick={closeModal}>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                            </svg>
-                        </button>
-                        <img src={selectedImage} alt="Full view" className="modal-image" />
-                    </div>
-                </div>
-            )}
         </div>
     );
 };

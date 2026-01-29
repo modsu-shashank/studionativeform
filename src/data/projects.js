@@ -1,7 +1,8 @@
 const projectsData = [
     {
         _id: '1',
-        title: 'Modern Villa Residence',
+        title:
+            'Modern Villa Residence',
         category: 'Architecture',
         subcategory: 'Residential',
         description: 'A contemporary villa that seamlessly blends indoor and outdoor living spaces. The design emphasizes natural light, open floor plans, and sustainable materials. Floor-to-ceiling windows frame stunning views while maintaining privacy through strategic landscaping.',
