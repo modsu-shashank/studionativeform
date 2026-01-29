@@ -136,11 +136,10 @@ const Home = () => {
                         <div className="featured-grid">
                             {featuredProjects.length > 0 ? (
                                 featuredProjects.map((project) => (
-                                    <div
+                                    <Link
                                         key={project._id}
+                                        to={`/project/${project._id}`}
                                         className="project-card"
-                                        onClick={() => goToProject(project._id)}
-                                        style={{ cursor: 'pointer' }}
                                     >
                                         <img
                                             src={project.images && project.images.length > 0
@@ -153,7 +152,7 @@ const Home = () => {
                                         <div className="project-card-overlay">
                                             <h3 className="project-card-title">{project.title}</h3>
                                         </div>
-                                    </div>
+                                    </Link>
                                 ))
                             ) : (
                                 <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '3rem' }}>

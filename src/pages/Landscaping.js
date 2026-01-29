@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import projectsData from '../data/projects';
 
 const Landscaping = () => {
@@ -78,11 +78,10 @@ const Landscaping = () => {
                             {projects.length > 0 ? (
                                 <div className="projects-grid">
                                     {projects.map((project) => (
-                                        <div
+                                        <Link
                                             key={project._id}
+                                            to={`/project/${project._id}`}
                                             className="project-card"
-                                            onClick={() => goToProject(project._id)}
-                                            style={{ cursor: 'pointer' }}
                                         >
                                             <img
                                                 src={project.images && project.images.length > 0
@@ -94,7 +93,7 @@ const Landscaping = () => {
                                             <div className="project-card-overlay">
                                                 <h3 className="project-card-title">{project.title}</h3>
                                             </div>
-                                        </div>
+                                        </Link>
                                     ))}
                                 </div>
                             ) : (
