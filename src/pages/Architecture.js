@@ -86,6 +86,7 @@ const Architecture = () => {
                                             />
                                             <div className="project-card-overlay">
                                                 <h3 className="project-card-title">{project.title}</h3>
+                                                <p className="project-card-category">{project.category}</p>
                                             </div>
                                         </Link>
                                     ))}

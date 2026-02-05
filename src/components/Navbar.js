@@ -46,13 +46,6 @@ const Navbar = () => {
                             Projects
                         </Link>
                     </li>
-
-                    <li>
-                        <Link to="/design-approach" className={isActive('/design-approach')}>
-                            Design Approach
-                        </Link>
-                    </li>
-
                     <li>
                         <Link to="/about" className={isActive('/about')}>
                             About Us

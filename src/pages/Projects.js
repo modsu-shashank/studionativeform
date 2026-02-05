@@ -37,13 +37,13 @@ const Projects = () => {
                     className="hero-background"
                 />
                 <div className="hero-overlay"></div>
-                <div className="hero-content">
+                {/* <div className="hero-content">
                     <h1 className="hero-title">Our Projects</h1>
                     <p className="hero-subtitle">Explore Our Portfolio</p>
                     <p className="hero-description">
                         A comprehensive showcase of our architectural, interior, and landscaping works
                     </p>
-                </div>
+                </div> */}
             </section>
 
             {/* Filter Section */}
@@ -94,6 +94,9 @@ const Projects = () => {
                                                 <h3 className="project-card-title">
                                                     {project.title}
                                                 </h3>
+                                                <p className="project-card-category">
+                                                    {project.category}
+                                                </p>
                                             </div>
                                         </Link>
                                     ))}
