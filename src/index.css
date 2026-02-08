@@ -174,6 +174,14 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  cursor: default;
+}
+
+a img,
+.project-card img,
+.clickable,
+a {
+  cursor: pointer;
 }
 
 button {
@@ -192,7 +200,7 @@ button {
 }
 
 .section {
-  padding: var(--spacing-4xl) 0;
+  padding: var(--spacing-xl) 0;
 }
 
 .section-sm {
@@ -320,6 +328,32 @@ button {
   transition: all var(--transition-base);
 }
 
+/* === HOME TOP TEXT === */
+.home-top-text {
+  padding: 150px 0 var(--spacing-xs);
+  background-color: var(--color-bg-primary);
+  text-align: center;
+}
+
+.top-text-content {
+  max-width: 100%;
+}
+
+.top-heading {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-primary);
+  line-height: 1.1;
+}
+
+.top-description {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 800px;
+  line-height: 1.6;
+}
+
 /* === HERO SECTION === */
 /* === HERO SECTION (Base) === */
 .hero {
@@ -394,13 +428,65 @@ button {
 /* === CINEMATIC HERO SECTION (Home Page) === */
 .hero-cinematic {
   position: relative;
-  height: 100vh;
+  height: 420px;
+  /* Tightened height to match 400px images better */
+  /* Reduced from 100vh to accommodate 400px images with padding */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #f5f5f5;
+  background-color: var(--color-bg-primary);
+}
+
+/* === HERO SLASH INTRO === */
+.hero-intro-splash {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-bg-primary);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: directDisappear 0s forwards;
+  animation-delay: 5s;
+}
+
+.intro-image-wrapper {
+  width: min(1440px, 90vw);
+  height: 400px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  animation: fadeInIntroImage 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.5s;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.intro-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 10s ease-out;
+}
+
+@keyframes fadeInIntroImage {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes directDisappear {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .hero-cinematic .hero-slider-container {
@@ -410,24 +496,25 @@ button {
   width: 100%;
   height: 100%;
   z-index: 1;
-  opacity: 0;
-  animation: fadeInSlider 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  animation-delay: 1.5s;
+  opacity: 1;
+  /* Instant appearance */
 }
 
 .hero-cinematic .hero-slider-track {
   display: flex;
   height: 100%;
   width: fit-content;
-  animation: infiniteHorizontalScroll 60s linear infinite;
+  animation: infiniteHorizontalScroll 80s linear infinite;
+  animation-delay: 5s;
+  /* Direct movement start after 5s */
   will-change: transform;
 }
 
 .hero-cinematic .hero-slide {
-  height: 100%;
-  width: 80vw;
+  height: 400px;
+  width: 1440px;
   flex-shrink: 0;
-  padding: 8vh 2vw;
+  padding: 0 20px;
   position: relative;
 }
 
@@ -436,11 +523,17 @@ button {
   height: 100%;
   object-fit: cover;
   filter: brightness(0.9) grayscale(0.2);
-  transition: filter 0.5s ease;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-cinematic .hero-slide:hover img {
   filter: brightness(1) grayscale(0);
+  transform: scale(1.02);
+}
+
+.hero-cinematic .hero-slide:hover img {
+  filter: brightness(1) grayscale(0);
+  transform: scale(1.02);
 }
 
 .hero-cinematic .hero-content {
@@ -588,7 +681,7 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--spacing-xl);
-  margin-top: var(--spacing-3xl);
+  margin-top: var(--spacing-lg);
 }
 
 .service-card {
@@ -596,7 +689,7 @@ button {
   overflow: hidden;
   background-color: var(--color-bg-secondary);
   transition: all var(--transition-slow);
-  cursor: pointer;
+  cursor: default;
   aspect-ratio: 4/5;
 }
 
@@ -655,6 +748,10 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
+  /* Ensure pointer cursor on the actual link */
+  pointer-events: auto;
+  /* Ensure it receives clicks */
 }
 
 .service-card-link::after {
@@ -678,7 +775,7 @@ button {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: var(--spacing-md);
-  margin-top: var(--spacing-3xl);
+  margin-top: var(--spacing-lg);
 }
 
 @media (max-width: 1400px) {
@@ -799,35 +896,47 @@ button {
 /* LEFT SIDE: Project Title (Starts from Bottom-Left corner, Flows UP) */
 .project-card-title {
   font-size: 0.9rem;
-  /* MANUALLY CHANGE LEFT SIZE HERE */
   left: 0;
   bottom: 20px;
-  /* Offset to prevent text cutting off at the edge */
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(20px);
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* RIGHT SIDE: Project Category (Starts from Top-Right corner, Flows DOWN) */
 .project-card-category {
   font-size: 1.2rem;
-  /* MANUALLY CHANGE RIGHT SIZE HERE */
   right: 0;
   top: 20px;
-  /* Offset to prevent text cutting off at the edge */
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* Label Hover Effects */
 .project-card:hover .project-card-title {
+  opacity: 1;
+  visibility: visible;
   color: var(--color-text-white);
-  transform: scale(1.05) rotate(180deg);
+  transform: rotate(180deg) translateY(0);
 }
 
 .project-card:hover .project-card-category {
+  opacity: 1;
+  visibility: visible;
   color: var(--color-text-white);
-  transform: scale(1.05);
+  transform: translateY(0);
+}
+
+.project-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  transition: background 0.5s ease;
 }
 
 .project-card:hover .project-card-overlay {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(94, 41, 10, 0.4);
 }
 
 /* === SECTION HEADERS === */

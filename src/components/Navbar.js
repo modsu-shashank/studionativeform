@@ -46,6 +46,7 @@ const Navbar = () => {
                             Projects
                         </Link>
                     </li>
+
                     <li>
                         <Link to="/about" className={isActive('/about')}>
                             About Us

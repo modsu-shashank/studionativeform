@@ -18,8 +18,28 @@ const Home = () => {
 
     return (
         <div className="home-page">
+            {/* Top Text Section */}
+            <section className="home-top-text">
+                <div className="container">
+                    <div className="top-text-content">
+                        <h2 className="top-heading">TIMELESS SPACES | THOUGHTFULLY | DESIGNED</h2>
+                    </div>
+                </div>
+            </section>
+
             {/* Hero Section */}
             <section className="hero-cinematic">
+                {/* Intro Splash Effect */}
+                <div className="hero-intro-splash">
+                    <div className="intro-image-wrapper">
+                        <img
+                            src="https://imgs.search.brave.com/PhLSkgUaoJCn3DlKwW44gltM_9LiBC63005StRY0H2A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5jZ3RyYWRlci5j/b20vdmFyaWFudHMv/ZWZieDZpcWt5dG4z/N3VheHo5bGYxaWMz/bjBkeC83OGFkZDlj/MmYwMmZiZDczYTQz/ZmZiMzk3MGJlMzg2/ODNjNWYxNWVmZjZj/YTg0OWRjNzhjNjQ0/ZjRmZjljZTFiLzli/MDlkY2ViYTRiY2Zi/ZThlYjJjY2FkN2Ix/YjMxYzY2LndlYnA"
+                            alt="Studio Native Form Intro"
+                            className="intro-image"
+                        />
+                    </div>
+                </div>
+
                 {/* Horizontal Sliding Gallery */}
                 <div className="hero-slider-container">
                     <div className="hero-slider-track">
@@ -28,25 +48,17 @@ const Home = () => {
                             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80",
                             "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1600&q=80",
                             "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&q=80",
-                            "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1600&q=80",
+                            "https://imgs.search.brave.com/PhLSkgUaoJCn3DlKwW44gltM_9LiBC63005StRY0H2A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5jZ3RyYWRlci5j/b20vdmFyaWFudHMv/ZWZieDZpcWt5dG4z/N3VheHo5bGYxaWMz/bjBkeC83OGFkZDlj/MmYwMmZiZDczYTQz/ZmZiMzk3MGJlMzg2/ODNjNWYxNWVmZjZj/YTg0OWRjNzhjNjQ0/ZjRmZjljZTFiLzli/MDlkY2ViYTRiY2Zi/ZThlYjJjY2FkN2Ix/YjMxYzY2LndlYnA",
                             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80",
                             "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1600&q=80",
                             "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&q=80",
-                            "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1600&q=80"
+                            "https://imgs.search.brave.com/PhLSkgUaoJCn3DlKwW44gltM_9LiBC63005StRY0H2A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5jZ3RyYWRlci5j/b20vdmFyaWFudHMv/ZWZieDZpcWt5dG4z/N3VheHo5bGYxaWMz/bjBkeC83OGFkZDlj/MmYwMmZiZDczYTQz/ZmZiMzk3MGJlMzg2/ODNjNWYxNWVmZjZj/YTg0OWRjNzhjNjQ0/ZjRmZjljZTFiLzli/MDlkY2ViYTRiY2Zi/ZThlYjJjY2FkN2Ix/YjMxYzY2LndlYnA"
                         ].map((url, idx) => (
                             <div className="hero-slide" key={idx}>
                                 <img src={url} alt={`Architectural Interior ${idx + 1}`} />
                             </div>
                         ))}
                     </div>
-                </div>
-
-                {/* Text Overlay */}
-                <div className="hero-content">
-                    <h1 className="hero-title">
-                        <span>Studio Native Form</span>
-                    </h1>
-                    <p className="hero-subtitle">Architecture • Interaction • Interiors</p>
                 </div>
             </section>
 
