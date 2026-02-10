@@ -13,24 +13,24 @@
 :root {
   /* Color Palette - Neutral & Architectural */
   /* Color Palette - User Custom */
-  --color-primary: #5E290A;
+  --color-primary: #5e290a;
   /* Dark Brown - Primary Text/Dark BG */
   --color-secondary: #4a4a4a;
   /* Secondary Text */
-  --color-accent: #9D441C;
+  --color-accent: #9d441c;
   /* Rust - Accent/Buttons */
-  --color-accent-light: #B45E35;
+  --color-accent-light: #b45e35;
   /* Lighter Rust */
 
-  --color-bg-primary: #FFF0DF;
+  --color-bg-primary: #fff0df;
   /* Very Light Cream - Main BG */
-  --color-bg-secondary: #E6D0B9;
+  --color-bg-secondary: #fff0df;
   /* Light Beige - Secondary BG */
-  --color-bg-dark: #5E290A;
+  --color-bg-dark: #5e290a;
   /* Dark Brown - Footer/Dark BG */
   --color-bg-muted: #e6e0d8;
 
-  --color-text-primary: #5E290A;
+  --color-text-primary: #5e290a;
   --color-text-secondary: #6b6b6b;
   --color-text-light: #9a9a9a;
   --color-text-white: #ffffff;
@@ -39,8 +39,8 @@
   --color-border-light: #e8e6e0;
 
   /* Typography */
-  --font-primary: 'Inter', 'Helvetica Neue', sans-serif;
-  --font-highlight: 'Inter', 'Helvetica Neue', sans-serif;
+  --font-primary: "Inter", "Helvetica Neue", sans-serif;
+  --font-highlight: "Inter", "Helvetica Neue", sans-serif;
   --letter-spacing-highlight: 0.15em;
 
   --font-size-xs: clamp(0.7rem, 2vw, 0.75rem);
@@ -92,7 +92,7 @@
 }
 
 /* === GOOGLE FONTS === */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
 
 /* === GLOBAL STYLES === */
 html {
@@ -243,7 +243,7 @@ button {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: var(--color-bg-secondary);
+  background-color: #e6d0b9;
   backdrop-filter: blur(6px);
   /* Reduced for performance */
   border-bottom: 1px solid var(--color-border-light);
@@ -251,7 +251,7 @@ button {
 }
 
 .navbar.scrolled {
-  background-color: var(--color-bg-primary);
+  background-color: #e6d0b9;
   box-shadow: var(--shadow-sm);
 }
 
@@ -294,7 +294,7 @@ button {
 }
 
 .navbar-menu li a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -345,6 +345,7 @@ button {
   margin-bottom: var(--spacing-lg);
   color: var(--color-primary);
   line-height: 1.1;
+  text-transform: none;
 }
 
 .top-description {
@@ -376,7 +377,7 @@ button {
   object-fit: cover;
   filter: brightness(0.7);
   will-change: transform;
-  animation: slowZoom 20s ease-in-out infinite alternate;
+  animation: slowZoom 15s ease-in-out infinite alternate;
 }
 
 @keyframes slowZoom {
@@ -395,7 +396,9 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.6) 100%);
 }
 
 .hero-content {
@@ -411,7 +414,7 @@ button {
   font-size: var(--font-size-5xl);
   font-weight: var(--font-weight-light);
   margin-bottom: var(--spacing-md);
-  color: #E6D0B9;
+  color: #e6d0b9;
 }
 
 .hero-subtitle {
@@ -449,7 +452,7 @@ button {
   align-items: center;
   justify-content: center;
   animation: directDisappear 0s forwards;
-  animation-delay: 5s;
+  animation-delay: 20s;
 }
 
 .intro-image-wrapper {
@@ -504,10 +507,12 @@ button {
   display: flex;
   height: 100%;
   width: fit-content;
-  animation: infiniteHorizontalScroll 80s linear infinite;
-  animation-delay: 5s;
-  /* Direct movement start after 5s */
+  animation: infiniteHorizontalScroll 100s ease-in-out infinite;
+  animation-delay: 0s;
+  /* Direct movement start after 20s (first pause) */
   will-change: transform;
+  position: relative;
+  left: calc(50% - 720px);
 }
 
 .hero-cinematic .hero-slide {
@@ -609,19 +614,49 @@ button {
     transform: translateX(0);
   }
 
+  20% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-12.5%);
+  }
+
+  45% {
+    transform: translateX(-12.5%);
+  }
+
+  50% {
+    transform: translateX(-25%);
+  }
+
+  70% {
+    transform: translateX(-25%);
+  }
+
+  75% {
+    transform: translateX(-37.5%);
+  }
+
+  95% {
+    transform: translateX(-37.5%);
+  }
+
   100% {
     transform: translateX(-50%);
-    /* Assumes duplicate track for seamlessness */
   }
 }
 
 @media (max-width: 768px) {
+  .hero-slider-track {
+    left: 0;
+  }
+
   .hero-slide {
     width: 100vw;
     padding: 10vh 0;
   }
 }
-
 
 .hero-cta {
   display: inline-flex;
@@ -755,7 +790,7 @@ button {
 }
 
 .service-card-link::after {
-  content: '→';
+  content: "→";
   transition: transform var(--transition-base);
 }
 
@@ -832,7 +867,7 @@ button {
 
 /* Diagonal Shape Overlays - Solid Brown Fill */
 .project-card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 10;

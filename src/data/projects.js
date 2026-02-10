@@ -1,7 +1,7 @@
 const projectsData = [
     {
         _id: '1',
-        title: 'Mr. Kiran Cafe',
+        title: 'Mr. Kiran cafe',
         category: 'Architecture',
         subcategory: 'Commercial',
         description: 'A vibrant and modern cafe designed to offer a unique social experience. The space features an open layout with a mix of industrial and organic elements, creating a warm and inviting atmosphere for coffee enthusiasts.',
