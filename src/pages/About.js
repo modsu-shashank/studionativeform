@@ -72,7 +72,7 @@ const About = () => {
                 fontSize: "var(--font-size-lg)",
                 lineHeight: "var(--line-height-relaxed)",
                 color: "var(--color-text-secondary)",
-                marginBottom: "var(--spacing-lg)",
+                marginBottom: "0",
               }}
             >
               స్టూడియో నేటివ్ ఫార్మ్ వద్ద, మేము మా క్లయింట్లతో కలిసి పని చేసి,
@@ -84,193 +84,75 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Values
-            <section className="section" style={{ backgroundColor: 'var(--color-bg-secondary)' }}>
-                <div className="container">
-                    <div className="section-header">
-                        <p className="section-label">Our Foundation</p>
-                        <h2 className="section-title">Mission & Values</h2>
-                    </div>
-
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                        gap: 'var(--spacing-2xl)',
-                        marginTop: 'var(--spacing-3xl)'
-                    }}>
-                        <div style={{ padding: 'var(--spacing-lg)' }}>
-                            <h3 style={{
-                                fontSize: 'var(--font-size-xl)',
-                                marginBottom: 'var(--spacing-md)',
-                                color: 'var(--color-accent)'
-                            }}>
-                                Our Mission
-                            </h3>
-                            <p style={{
-                                fontSize: 'var(--font-size-base)',
-                                lineHeight: 'var(--line-height-relaxed)',
-                                color: 'var(--color-text-secondary)'
-                            }}>
-                                To create innovative, sustainable, and timeless designs that enrich lives
-                                and communities. We strive to push the boundaries of what's possible while
-                                remaining grounded in principles of functionality, beauty, and environmental responsibility.
-                            </p>
-                        </div>
-
-                        <div style={{ padding: 'var(--spacing-lg)' }}>
-                            <h3 style={{
-                                fontSize: 'var(--font-size-xl)',
-                                marginBottom: 'var(--spacing-md)',
-                                color: 'var(--color-accent)'
-                            }}>
-                                Excellence
-                            </h3>
-                            <p style={{
-                                fontSize: 'var(--font-size-base)',
-                                lineHeight: 'var(--line-height-relaxed)',
-                                color: 'var(--color-text-secondary)'
-                            }}>
-                                We are committed to the highest standards of design and execution. Every project
-                                receives our full attention to detail, from initial concept through final completion.
-                            </p>
-                        </div>
-
-                        <div style={{ padding: 'var(--spacing-lg)' }}>
-                            <h3 style={{
-                                fontSize: 'var(--font-size-xl)',
-                                marginBottom: 'var(--spacing-md)',
-                                color: 'var(--color-accent)'
-                            }}>
-                                Sustainability
-                            </h3>
-                            <p style={{
-                                fontSize: 'var(--font-size-base)',
-                                lineHeight: 'var(--line-height-relaxed)',
-                                color: 'var(--color-text-secondary)'
-                            }}>
-                                Environmental stewardship is at the core of our practice. We integrate sustainable
-                                materials, energy-efficient systems, and biophilic design principles into every project.
-                            </p>
-                        </div>
-
-                        <div style={{ padding: 'var(--spacing-lg)' }}>
-                            <h3 style={{
-                                fontSize: 'var(--font-size-xl)',
-                                marginBottom: 'var(--spacing-md)',
-                                color: 'var(--color-accent)'
-                            }}>
-                                Collaboration
-                            </h3>
-                            <p style={{
-                                fontSize: 'var(--font-size-base)',
-                                lineHeight: 'var(--line-height-relaxed)',
-                                color: 'var(--color-text-secondary)'
-                            }}>
-                                We work closely with our clients, consultants, and craftspeople to ensure that
-                                every voice is heard and every detail is considered in the design process.
-                            </p>
-                        </div>
-
-                        <div style={{ padding: 'var(--spacing-lg)' }}>
-                            <h3 style={{
-                                fontSize: 'var(--font-size-xl)',
-                                marginBottom: 'var(--spacing-md)',
-                                color: 'var(--color-accent)'
-                            }}>
-                                Innovation
-                            </h3>
-                            <p style={{
-                                fontSize: 'var(--font-size-base)',
-                                lineHeight: 'var(--line-height-relaxed)',
-                                color: 'var(--color-text-secondary)'
-                            }}>
-                                We embrace new technologies, materials, and methodologies while respecting
-                                traditional craftsmanship and time-tested design principles.
-                            </p>
-                        </div>
-
-                        <div style={{ padding: 'var(--spacing-lg)' }}>
-                            <h3 style={{
-                                fontSize: 'var(--font-size-xl)',
-                                marginBottom: 'var(--spacing-md)',
-                                color: 'var(--color-accent)'
-                            }}>
-                                Integrity
-                            </h3>
-                            <p style={{
-                                fontSize: 'var(--font-size-base)',
-                                lineHeight: 'var(--line-height-relaxed)',
-                                color: 'var(--color-text-secondary)'
-                            }}>
-                                Honesty, transparency, and ethical practice guide all our relationships and decisions.
-                                We build trust through consistent delivery and open communication.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
-
       {/* Team Section */}
       <section className="section">
         <div className="container">
-          <div className="section-header">
-            {/* <p className="section-label">Meet The Team</p> */}
-            <h2 className="section-title">Our Founder</h2>
-            <p className="section-description">
-              {/* A diverse group of talented professionals united by a passion for exceptional design */}
-            </p>
-          </div>
-
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(clamp(250px, 100%, 300px), 1fr))",
-              gap: "var(--spacing-2xl)",
-              marginTop: "var(--spacing-3xl)",
+              display: "flex",
+              flexDirection: "column",
+              gap: "var(--spacing-4xl)",
             }}
           >
-            <div style={{ textAlign: "center" }}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                gap: "var(--spacing-2xl)",
+                alignItems: "center",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                maxWidth: "1000px",
+                margin: "0 auto",
+              }}
+            >
               <div
                 style={{
-                  width: "200px",
-                  height: "200px",
-                  margin: "0 auto var(--spacing-md)",
-                  borderRadius: "50%",
+                  width: "clamp(250px, 30vw, 350px)",
+                  height: "clamp(250px, 30vw, 350px)",
+                  borderRadius: "var(--border-radius-md)",
                   overflow: "hidden",
                   backgroundColor: "var(--color-bg-secondary)",
+                  flexShrink: 0,
+                  boxShadow: "var(--shadow-lg)",
                 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b9352"
-                  alt="Founder"
+                  src="https://images.unsplash.com/photo-1573496359142-88d87734a5a2?w=800&q=80"
+                  alt="Asresha Reddy"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               </div>
-              <h4 style={{ marginBottom: "var(--spacing-xs)" }}>
-                Asresha Reddy
-              </h4>
-              <p
-                style={{
-                  fontSize: "var(--font-size-sm)",
-                  color: "var(--color-accent)",
-                  marginBottom: "var(--spacing-sm)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.1em",
-                }}
-              >
-                Founder & Principal Architect
-              </p>
-              <p
-                style={{
-                  fontSize: "var(--font-size-sm)",
-                  color: "var(--color-text-secondary)",
-                  lineHeight: "var(--line-height-relaxed)",
-                }}
-              >
-                Architecture professional with experience in design, planning,
-                and site coordination, focused on creating functional and
-                aesthetic spaces.
-              </p>
+              <div style={{ flex: "1", minWidth: "300px", textAlign: "left" }}>
+                <h4 style={{ marginBottom: "var(--spacing-xs)", fontSize: "var(--font-size-3xl)" }}>
+                  Asresha Reddy
+                </h4>
+                <p
+                  style={{
+                    fontSize: "var(--font-size-sm)",
+                    color: "var(--color-accent)",
+                    marginBottom: "var(--spacing-md)",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.2em",
+                    fontWeight: "var(--font-weight-semibold)",
+                  }}
+                >
+                  Founder & Principal Architect
+                </p>
+                <p
+                  style={{
+                    fontSize: "var(--font-size-lg)",
+                    color: "var(--color-text-secondary)",
+                    lineHeight: "var(--line-height-relaxed)",
+                  }}
+                >
+                  Architecture professional with experience in design, planning,
+                  and site coordination, focused on creating functional and
+                  aesthetic spaces. Over the years, she has developed a keen eye for detail
+                  and a passion for sustainable design that bridges the gap between
+                  nature and luxury.
+                </p>
+              </div>
             </div>
 
             {/* 

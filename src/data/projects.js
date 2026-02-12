@@ -14,7 +14,7 @@ const projectsData = [
             }
         ],
         year: 2024,
-        location: 'Hyderabad, Telangana',
+        location: 'Hyderabad, Telangana',   
         area: '1,200 sq ft',
         client: 'Mr. Kiran',
         featured: true,
